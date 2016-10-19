@@ -21,26 +21,36 @@
 				}
 			return true;
 		}
-		if (name ==''){
-			validar(name,'La primera letra debe ser mayúscula',1,!(/^[A-Z][a-z]*$/).test (name))
+		if (name  !==''){
+			validar(name,'La primera letra debe ser mayúscula',1,!(/^[A-Z][a-z]*$/).test (name));
 		}
-		if (lastname=='') {
+		if (lastname !=='') {
 			validar(lastname,'La primera letra debe ser mayúscula',2,!(/^[A-Z][a-z]*$/).test (lastname));
 		}
-		if (mail=='') {
+		if (mail !=='') {
 			validar(mail,'Ingrese un e-mail válido',3,!(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test (mail));
 		}
-		if (pass=='') {
+		if (pass !=='') {
 			validar(pass,'Elija otra contraseña',4,pass.length < 6 || pass  == 'password' || /^\d{6}$/.test(pass));
 		}
-		
 		validar(name,'Campo requerido',1,name=='');
 		validar(lastname,'Campo requerido',2,lastname=='');
 		validar(mail,'Campo requerido',3,mail=='');
 		validar(pass,'Campo requerido',4,pass=='');
 		validar(select,'Debes elegir una opcion',5,select=='0');
+
+		/*function validarError(value){
+			if(value !=='');
+			return validar(value, mensaje, div_index, validation);
+		}
+
+		validarError(validar(name,'La primera letra debe ser mayúscula',1,!(/^[A-Z][a-z]*$/).test (name)));
+		validarError(validar(lastname,'La primera letra debe ser mayúscula',2,!(/^[A-Z][a-z]*$/).test (lastname)));
+		validarError(validar(mail,'Ingrese un e-mail válido',3,!(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test (mail)));
+		validarError(validar(pass,'Elija otra contraseña',4,pass.length < 6 || pass  == 'password' || /^\d{6}$/.test(pass)));*/
 		
-			
+
+		
 	}
 
 
